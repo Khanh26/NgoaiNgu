@@ -205,6 +205,10 @@ a {
     display: inline-block;
 }
     
+.d-register {
+    display: inline-block;
+}
+
 .d-register .link-resgister {
     font-size: 21px;
     color: white;
@@ -212,5 +216,4 @@ a {
     padding: 10px 16px;
     border: none;
     border-radius: 13px;
-    display: inline-block;
 }
