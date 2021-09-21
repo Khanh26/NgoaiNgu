@@ -12,6 +12,15 @@ a {
     text-decoration: none;
 }
 
+.arrow-up::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: 20px solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top:-30px;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -42,21 +51,43 @@ a {
 
 #main-header #nav {
     display: flex;
+    position: relative;
 }
+
+
 
 #nav li {
-    padding: 0 16px;
     margin-left: 8px;
+    position: relative;
 }
 
-#nav > li > a {
+#nav > li::before {
+    content: '';
+    position: absolute;
+    background-color: #f8ba1b;
+    width: 73%;
+    height: 3px;
+    bottom: 0;
+    display: none;
+}
+
+#nav > li.nav-item {
+    padding: 30px 16px;
+}
+
+#nav > li.nav-item > a {
     color: black;
     font-size: 20px;
 }
 
-#nav > li:hover > a{
+#nav >li.nav-item:hover::before {
+    display: block;
+}
+
+#nav > li.nav-item:hover > a{
     color: #f8ba1b;
 }
+
 
 #main-header .float-l {
     flex-grow: 1;
@@ -111,8 +142,75 @@ a {
     background-color: #f8ba1b;
 }
 
+.d-login .link-login:hover {
+    background-color: #e0a40c;
+}
+
+/* subnav */
+#nav .subnav {
+    position: absolute;
+    top: 84px;
+    width: 160%;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: none;
+}
+
+.subnav .subnav-item {
+    padding: 16px 0 16px 0px;
+}
+
+.subnav-item a {
+    color: black;
+    font-size: 17px;
+}
+
+#nav > li.nav-item:hover .subnav{
+    display: block;
+}
+
+.subnav-item .active-subnav-item {
+    display: none;
+}
+.subnav-item:hover .active-subnav-item {
+    display: inline-block;
+}
+
+.subnav-item:hover a {
+    color: #f8ba1b;
+}
 
 
+/* slider */
 
+#slider {
+    background: url('../img/sliders/slider1.png') top center / cover no-repeat;
+    width: 100%;
+    height: 540px;
+    margin-top: 84px;
+}
 
+#slider .main-slide {
+    padding: 9% 8%;
+}
 
+.main-slide .heading-slogan {
+    font-size: 34px;
+    margin-bottom: 13px;
+}
+    
+.main-slide .mini-slogan {
+    font-size: 23px;
+    margin-right: 10px;
+    display: inline-block;
+}
+    
+.d-register .link-resgister {
+    font-size: 21px;
+    color: white;
+    background-color: #f8ba1b;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 13px;
+    display: inline-block;
+}
