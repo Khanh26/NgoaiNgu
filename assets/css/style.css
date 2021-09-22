@@ -229,7 +229,11 @@ a {
 
 /* content */
 #content {
+
+}
+#content .info {
     padding: 24px 8%;
+    margin-bottom: 108px;
 }
 
 #content .heading-info {
@@ -241,7 +245,6 @@ a {
     display: flex;
 }
 
-
 #content .main-info {
     padding-right: 76px;
 }
@@ -250,7 +253,7 @@ a {
     margin-bottom: 16px;
 }
 
-#content .info {
+#content .p-info {
     text-align: justify;
     opacity: 0.6;
     margin-bottom: 24px;
@@ -273,4 +276,64 @@ a {
 #content .img-info {
     width: 100%;
     border-radius: 18px;
+}
+
+/* reason */
+
+#content .reason {
+    padding: 0;
+    background: url("../img/content/reason2.png") no-repeat;
+}
+
+.reason .d-reason {
+    padding: 64px 8%;
+}
+
+.reason .heading-reason {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.reason .content-reason {
+    display: flex;
+}
+
+.reason .info-reason {
+    width: 30%;
+    margin-right: 32px;
+}
+
+.reason .heading-info-reason {
+    color: #FCBE40;
+    font-size: 33px;
+    margin-bottom: 24px;
+}
+
+.reason .main-reason {
+    width: 70%;
+    display: flex;
+}
+
+.reason .item-reason {
+    margin-right: 16px;
+    width: 25%;
+}
+
+.w-spacing {
+    word-spacing: 5px;
+}
+
+.reason .p-reason {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.reason .heading-item-reason {
+    color: #FCBE40;
+    font-size: 33px;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100%;
 }
