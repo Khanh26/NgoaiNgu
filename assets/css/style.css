@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+.op-6 {
+    opacity: 0.6;
+}
+
 .col-2 {
     width: 50%;
 }
@@ -204,7 +208,7 @@ a {
     display: inline-block;
 }
 
-.d-register .link-resgister {
+.d-register .link-register {
     font-size: 21px;
     color: white;
     background-color: #f8ba1b;
@@ -213,7 +217,7 @@ a {
     border-radius: 13px;
 }
 
-.d-register .link-resgister:hover {
+.d-register .link-register:hover {
     background-color: #e0a40c;
 }
 
@@ -221,35 +225,35 @@ a {
 #content {
 
 }
-#content .info {
+#content #info {
     padding: 24px 4%;
     margin-bottom: 108px;
 }
 
-#content .heading-info {
+#info .heading-info {
     text-align: center;
     margin-bottom: 56px;
 }
 
-#content .content-info {
+#info .content-info {
     display: flex;
 }
 
-#content .main-info {
+#info .main-info {
     padding-right: 76px;
 }
 
-#content .heading-TT {
+#info .heading-TT {
     margin-bottom: 16px;
 }
 
-#content .p-info {
+#info .p-info {
     text-align: justify;
     opacity: 0.6;
     margin-bottom: 24px;
 }
 
-#content .link-info {
+#info .link-info {
     font-size: 17px;
     color: white;
     background-color: #f8ba1b;
@@ -259,52 +263,52 @@ a {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-#content .link-info:hover {
+#info .link-info:hover {
     background-color: #e0a40c;
 }
 
-#content .img-info {
+#info .img-info {
     width: 100%;
     border-radius: 18px;
 }
 
 /* reason */
 
-#content .reason {
+#content #reason {
     padding: 0;
     background: url("../img/content/reason2.png") no-repeat;
 }
 
-.reason .d-reason {
+#reason .d-reason {
     padding: 64px 4%;
 }
 
-.reason .heading-reason {
+#reason .heading-reason {
     color: white;
     margin-bottom: 20px;
 }
 
-.reason .content-reason {
+#reason .content-reason {
     display: flex;
 }
 
-.reason .info-reason {
+#reason .info-reason {
     width: 30%;
     margin-right: 32px;
 }
 
-.reason .heading-info-reason {
+#reason .heading-info-reason {
     color: #FCBE40;
     font-size: 33px;
     margin-bottom: 24px;
 }
 
-.reason .main-reason {
+#reason .main-reason {
     width: 70%;
     display: flex;
 }
 
-.reason .item-reason {
+#reason .item-reason {
     padding: 0 16px 0 0;
     width: 25%;
 }
@@ -313,7 +317,7 @@ a {
     word-spacing: 5px;
 }
 
-.reason .p-reason {
+#reason .p-reason {
     font-size: 14px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -321,10 +325,261 @@ a {
     line-height: 24px;
 }
 
-.reason .heading-item-reason {
+#reason .heading-item-reason {
     color: #FCBE40;
     font-size: 37px;
     margin-bottom: 24px;
     text-align: center;
     width: 100%;
 }
+
+#content #courses {
+    padding: 82px 4%;
+    background-color: #eeecec;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+    font-size: 28px;
+}
+
+#courses .heading-courses {
+    padding-left: 16px;
+}
+
+
+#courses .heading-item-courses {
+    color: #e9a929;
+    font-size: 36px;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    padding-left: 16px;
+}
+
+#courses .slide-courses {
+    
+}
+
+#courses .details-courses {
+    margin-right: 16px;
+    margin-left: 16px;
+    border-radius: 16px;
+}
+
+#courses .details-courses:hover {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+#courses .d-img-courses {
+}
+
+#courses .img-courses {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+
+.slick-list {
+    padding-bottom: 18px;
+}
+
+
+#courses .content-courses {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+}
+
+#courses .main-content-courses {
+    position: relative;
+    padding: 16px;
+    min-height: 244px;
+}
+
+#courses .classes {
+    padding-top: 20px;
+}
+#courses .price,
+#courses .day,
+#courses .start-day {
+    padding-top: 8px;
+}
+
+#courses .btn-register {
+    position: absolute;
+    bottom: 16px;
+    font-size: 16px;
+    width: 100%;
+    padding: 8px 0;
+    color: black;
+    background-color: #ffd261;
+    border: none;
+    border-radius: 6px;
+    width: 183px;
+}
+
+#courses .btn-register:hover {
+    background-color: #f8ba1b;
+    cursor: pointer;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+}
+
+/* modal */
+.modal-register {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-register .modal-main {
+    background-color: #fff;
+    width: 500px;
+    position: relative;
+    border-radius: 8px;
+    animation: modalFaceIn ease 0.5s;
+    
+}
+
+.modal-main .modal-header {
+    background-color: #ffd261;
+    border-radius: 8px 8px 0 0;
+    height: 70px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-main .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border-radius: 4px;
+    
+}
+
+.modal-main .modal-close:hover {
+    background-color: #e9a929;
+    cursor: pointer;
+}
+
+.modal-close .font-w {
+    font-weight: 700;
+}
+
+.modal-main .modal-body {
+    padding: 28px 24px;
+}
+
+.modal-main .d-selected-courses {
+    width: 100%;
+    padding-left: 14px;
+}
+
+.modal-main .heading-selected-courses, .selected-courses {
+    display: inline;
+}
+
+.modal-main .selected-courses {
+    margin-left: 12px;
+}
+
+.modal-main .heading-selected-courses {
+    width: 23%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.modal-main .form-register {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.modal-main .d-input {
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+
+}
+
+.modal-main .modal-label {
+    width: 30%;
+    text-align: right;
+    /* padding: ; */
+}
+
+.modal-main .modal-input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 239px;
+    margin-left: 12px;
+    padding: 8px 8px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    outline: none;
+}
+
+.modal-main .modal-input:focus {
+    border: 1px solid #e0a40c;
+}
+
+.modal-main .modal-label {
+    font-size: 18px;
+}
+
+.modal-main input#birtday {
+    width: 239px;
+}
+
+.modal-main input[type="radio"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+.modal-main .btn-submit {
+    margin-top: 40px;
+    padding: 12px 100px;
+    font-size: 20px;
+    background-color: #ffd261;
+    border: none;
+    border-radius: 12px;
+}
+
+.modal-main .btn-submit:hover {
+    background-color: #e9a929;
+    cursor: pointer;
+}
+
+@keyframes modalFaceIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* end modal */

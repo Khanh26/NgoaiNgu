@@ -6,124 +6,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="assets/lib/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="assets/lib/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/img/logo/logo.PNG" />
     <title>Trung Tâm English</title>
 </head>
 <body>
-    <div id="header">
-        <div id="main-header">
-            <a class="link-logo" href=""><img id="logo" src="assets/img/logo/logo.PNG" alt=""></a>
-
-            <ul id="nav">
-                <li class="nav-item">
-                    <a href="">Giới Thiệu</a>
-
-                </li>
-                <li class="nav-item">
-                    <a href="">Khóa học</a>
-                    <ul class="subnav">
-                        <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi TOEIC</a></li>
-                        <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi IElTS</a></li>
-                        <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi A1</a></li>
-                        <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi B1</a></li>
-                    </ul>
-                </li class="nav-item">
-                <li class="nav-item"><a href="">Tin Tức</a></li>
-                <li class="nav-item"><a href="">Liên hệ</a></li>
-            </ul>
-
-            <div class="float-l">
-                <div class="d-search">
-                    <input type="text" name="search" class="search" placeholder="Tìm kiếm khóa học...">
-                    <div class="btn-search">
-                        <i class="ti-search"></i>
-                    </div>
-                </div>
+    <div class="main">
+        <div id="header">
+            <div id="main-header">
+                <a class="link-logo" href=""><img id="logo" src="assets/img/logo/logo.PNG" alt=""></a>
     
-                <div class="d-login">
-                    <a class="link-login" href="">Đăng nhập</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- slide -->
-    <div id="slider">
-        <div class="main-slide">
-            <h1 class="heading-slogan">Môi Trường Học Tập Quốc Tế</h1>
-            <p class="mini-slogan">Còn đợi gì nữa</p>
-            <div class="d-register">
-                <a class="link-resgister" href="">Đăng ký ngay</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="content">
-        <div class="info">
-            <h1 class="heading-info">GIỚI THIỆU</h1>
-            <div class="content-info">
-                <div class="main-info col-2">
-                    <h2 class="heading-TT">Trung Tâm English</h2>
-                    <p class="p-info">Tự hào là đơn vị đào tạo tiếng anh hàng đầu tại Việt Nam hiện nay. Với lộ trình học tập tinh gọn – hiệu quả cùng đội ngũ giảng viên, trợ giảng nhiệt huyết, giàu kinh nghiệm, trung tâm English đã giúp hàng chục nghìn học viên khơi dậy niềm đam mê, xóa bỏ nỗi sợ tiếng anh và đạt điểm số cao trong các kỳ thi mang tính chất học thuật như TOEIC, IELTS và THI ĐẠI HỌC...</p>
-                    <a class="link-info" href="">Xem chi tiết</a>
-                </div>
-                <div class="content-img-info col-2">
-                    <img class="img-info" src="assets/img/content/info1.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="reason">
-            <div class="d-reason">
-                <h3 class="heading-reason">LÝ DO VÌ SAO CHỌN</h1>
-                <div class="content-reason">
-                    <div class="info-reason">
-                        <h2 class="heading-info-reason">Trung Tâm English</h2>
-                        <p class="p-reason w-spacing">Được thành lập từ năm 2014, sau hơn 7 năm phát triển, Trung tâm English đã trở thành đơn vị đào tạo tiếng Anh hàng đầu tại Việt Nam.</p>
-                    </div>
-                    <div class="main-reason">
-                        <div class="item-reason">
-                            <i class="fas fa-graduation-cap heading-item-reason"></i>
-                            <p class="p-reason">Đào tạo hơn 10.000 bạn trẻ mất gốc tiếng Anh, sở hữu chứng chỉ TOIEC, Luyện thi ĐH môn Anh với điểm số cao.</p>
-                        </div>
+                <ul id="nav">
+                    <li class="nav-item">
+                        <a href="">Giới Thiệu</a>
     
-                        <div class="item-reason">
-                            <i class="fa fa-book-open heading-item-reason"></i>
-                            <p class="p-reason">Lộ trình học tại trung tâm English được thiết kế theo giáo trình riêng, rõ ràng, tinh gọn và hiệu quả.</p>
-                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Khóa học</a>
+                        <ul class="subnav">
+                            <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi TOEIC</a></li>
+                            <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi IElTS</a></li>
+                            <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi A1</a></li>
+                            <li class="subnav-item"><a href=""><i class="ti-angle-double-right active-subnav-item"></i> Luyện thi B1</a></li>
+                        </ul>
+                    </li class="nav-item">
+                    <li class="nav-item"><a href="">Tin Tức</a></li>
+                    <li class="nav-item"><a href="">Liên hệ</a></li>
+                </ul>
     
-                        <div class="item-reason">
-                            <i class="fa fa-users heading-item-reason"></i>
-                            <p class="p-reason">Đội ngũ giảng viên, trợ giảng chuyên nghiệp đến từ các trường đại học danh tiếng trong và ngoài nước.</p>
-                        </div>
-    
-                        <div class="item-reason">
-                            <i class="fa fa-medal heading-item-reason"></i>
-                            <p class="p-reason">Cam kết đầu ra bằng văn bản với học viên.</p>
+                <div class="float-l">
+                    <div class="d-search">
+                        <input type="text" name="search" class="search" placeholder="Tìm kiếm khóa học...">
+                        <div class="btn-search">
+                            <i class="ti-search"></i>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="courses">
-
-        </div>
-
-        <div class="lecturers">
-
-        </div>
         
-        <div class="feedback">
-
+                    <div class="d-login">
+                        <a class="link-login" href="">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
+    
+        <!-- slide -->
+        <div id="slider">
+            <div class="main-slide">
+                <h1 class="heading-slogan">Môi Trường Học Tập Quốc Tế</h1>
+                <p class="mini-slogan">Còn đợi gì nữa</p>
+                <div class="d-register">
+                    <a class="link-register" href="#courses">Đăng ký ngay</a>
+                </div>
+            </div>
+        </div>
+    
+        <div id="content">
+            <div id="info">
+                <h1 class="heading-info">GIỚI THIỆU</h1>
+                <div class="content-info">
+                    <div class="main-info col-2">
+                        <h2 class="heading-TT">Trung Tâm English</h2>
+                        <p class="p-info">Tự hào là đơn vị đào tạo tiếng anh hàng đầu tại Việt Nam hiện nay. Với lộ trình học tập tinh gọn – hiệu quả cùng đội ngũ giảng viên, trợ giảng nhiệt huyết, giàu kinh nghiệm, trung tâm English đã giúp hàng chục nghìn học viên khơi dậy niềm đam mê, xóa bỏ nỗi sợ tiếng anh và đạt điểm số cao trong các kỳ thi mang tính chất học thuật như TOEIC, IELTS và THI ĐẠI HỌC...</p>
+                        <a class="link-info" href="">Xem chi tiết</a>
+                    </div>
+                    <div class="content-img-info col-2">
+                        <img class="img-info" src="assets/img/content/info1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div id="reason">
+                <div class="d-reason">
+                    <h3 class="heading-reason">LÝ DO VÌ SAO CHỌN</h1>
+                    <div class="content-reason">
+                        <div class="info-reason">
+                            <h2 class="heading-info-reason">Trung Tâm English</h2>
+                            <p class="p-reason w-spacing">Được thành lập từ năm 2014, sau hơn 7 năm phát triển, Trung tâm English đã trở thành đơn vị đào tạo tiếng Anh hàng đầu tại Việt Nam.</p>
+                        </div>
+                        <div class="main-reason">
+                            <div class="item-reason">
+                                <i class="fas fa-graduation-cap heading-item-reason"></i>
+                                <p class="p-reason">Đào tạo hơn 10.000 bạn trẻ mất gốc tiếng Anh, sở hữu chứng chỉ TOIEC, Luyện thi ĐH môn Anh với điểm số cao.</p>
+                            </div>
+        
+                            <div class="item-reason">
+                                <i class="fa fa-book-open heading-item-reason"></i>
+                                <p class="p-reason">Lộ trình học tại trung tâm English được thiết kế theo giáo trình riêng, rõ ràng, tinh gọn và hiệu quả.</p>
+                            </div>
+        
+                            <div class="item-reason">
+                                <i class="fa fa-users heading-item-reason"></i>
+                                <p class="p-reason">Đội ngũ giảng viên, trợ giảng chuyên nghiệp đến từ các trường đại học danh tiếng trong và ngoài nước.</p>
+                            </div>
+        
+                            <div class="item-reason">
+                                <i class="fa fa-medal heading-item-reason"></i>
+                                <p class="p-reason">Cam kết đầu ra bằng văn bản với học viên.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="courses">
+                <h2 class="heading-courses">CÁC KHÓA HỌC</h2>
+                <h1 class="heading-item-courses">Trung Tâm English</h1>
+                <div class="items-courses">
+                    <div class="slide-courses">
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(1)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(2)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(3)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(4)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(5)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(6)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">
+                                        Khóa học TOEIC cấp tốc
+                                    </h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(7)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="details-courses">
+                            <div class="d-img-courses">
+                                <img class="img-courses" src="assets/img/content/courses/toeic.png" alt="">
+                            </div>
+                            <div class="content-courses">
+                                <div class="main-content-courses">
+                                    <h3 class="heading-detail-courses">Khóa học A1</h3>
+                                    <p class="classes op-6">Số lớp: 2</p>
+                                    <p class="start-day op-6">Khai giảng: 26/10/2021</p>
+                                    <p class="day op-6">Thời gian: 3 tháng</p>
+                                    <P class="price op-6">Giá: 4.000.000đ</P>
+                                    <button class="btn-register" onclick="showRegister(8)">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="lecturers">
+    
+            </div>
+            
+            <div class="feedback">
+    
+            </div>
+    
+        </div>
+    
+        <div id="footer">
+    
+        </div>
     </div>
 
-    <div id="footer">
-
+    <!-- Start modal  -->
+    <div class="modal-register">
+        <div class="modal-main">
+            <div class="modal-close">
+                <i class="ti-close font-w"></i>
+            </div>
+            <header class="modal-header">
+                <h1 class="modal-heading">ĐĂNG KÝ</h1>
+            </header>
+            <div class="modal-body">
+                <div class="d-selected-courses">
+                    <p class="heading-selected-courses">Bạn đang chọn:</p>
+                    <p class="selected-courses">Khóa học TOEIC cấp tốc</p>
+                </div>
+                <form action="" class="form-register">
+                    <!-- Name -->
+                    <div class="d-name d-input">
+                        <label for="" class="modal-label">Họ và tên:</label>
+                        <input type="text" class="modal-input" name="name" id="name" required>
+                    </div>
+                    <!-- Sex -->
+                    <div class="d-sex d-input">
+                        <label for="" class="modal-label d-inline-block">Giới tính:</label>
+                        <input type="radio" class="modal-input" name="sex" id="sex" value="Nam" checked> Nam
+                        <input type="radio" class="modal-input" name="sex" id="sex" value="Nữ"> Nữ
+                    </div>
+                    <!-- Birtday -->
+                    <div class="d-birtday d-input">
+                        <label for="" class="modal-label">Ngày sinh:</label>
+                        <input type="date" class="modal-input" name="birtday" id="birtday" required>
+                    </div>
+                    <!-- Email -->
+                    <div class="d-email d-input">
+                        <label for="" class="modal-label">Email:</label>
+                        <input type="text" class="modal-input" name="email" id="email" required>
+                    </div>
+                    <!-- Address -->
+                    <div class="d-address d-input">
+                        <label for="" class="modal-label">Địa chỉ:</label>
+                        <input type="text" class="modal-input" name="address" id="address" required>
+                    </div>
+                    <!-- Phone -->
+                    <div class="d-phone d-input">
+                        <label for="" class="modal-label">Số điện thoại:</label>
+                        <input type="text" class="modal-input" name="phone" id="phone" required>
+                    </div>
+                    <!-- button -->
+                    <button type="submit" onclick="" class="btn-submit">Đăng ký</button>
+                </form>
+            </div>
+        </div>
     </div>
+    <!-- End modal -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/lib/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/slideCourses.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 </html>
