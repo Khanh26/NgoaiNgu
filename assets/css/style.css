@@ -451,7 +451,7 @@ a {
 
 .modal-register .modal-main {
     background-color: #fff;
-    width: 500px;
+    width: 875px;
     position: relative;
     border-radius: 8px;
     animation: modalFaceIn ease 0.5s;
@@ -497,20 +497,6 @@ a {
     padding-left: 14px;
 }
 
-.modal-main .heading-selected-courses, .selected-courses {
-    display: inline;
-}
-
-.modal-main .selected-courses {
-    margin-left: 12px;
-}
-
-.modal-main .heading-selected-courses {
-    width: 23%;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 .modal-main .form-register {
     margin-top: 16px;
     text-align: center;
@@ -531,7 +517,7 @@ a {
 
 .modal-main .modal-input {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 239px;
+    width: 50%;
     margin-left: 12px;
     padding: 8px 8px;
     font-size: 16px;
@@ -549,7 +535,12 @@ a {
 }
 
 .modal-main input#birtday {
-    width: 239px;
+    width: 206.75px;
+    height: 37px;
+}
+
+.modal-main .d-sex {
+    height: 61px;
 }
 
 .modal-main input[type="radio"] {
@@ -569,6 +560,14 @@ a {
 .modal-main .btn-submit:hover {
     background-color: #e9a929;
     cursor: pointer;
+}
+
+.row {
+    display: flex;
+}
+
+.modal-main .county-cities-input {
+    height: 37px;
 }
 
 @keyframes modalFaceIn {

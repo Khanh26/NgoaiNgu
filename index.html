@@ -286,41 +286,69 @@
                 <h1 class="modal-heading">ĐĂNG KÝ</h1>
             </header>
             <div class="modal-body">
-                <div class="d-selected-courses">
-                    <p class="heading-selected-courses">Bạn đang chọn:</p>
-                    <p class="selected-courses">Khóa học TOEIC cấp tốc</p>
-                </div>
                 <form action="" class="form-register">
-                    <!-- Name -->
-                    <div class="d-name d-input">
-                        <label for="" class="modal-label">Họ và tên:</label>
-                        <input type="text" class="modal-input" name="name" id="name" required>
-                    </div>
-                    <!-- Sex -->
-                    <div class="d-sex d-input">
-                        <label for="" class="modal-label d-inline-block">Giới tính:</label>
-                        <input type="radio" class="modal-input" name="sex" id="sex" value="Nam" checked> Nam
-                        <input type="radio" class="modal-input" name="sex" id="sex" value="Nữ"> Nữ
-                    </div>
-                    <!-- Birtday -->
-                    <div class="d-birtday d-input">
-                        <label for="" class="modal-label">Ngày sinh:</label>
-                        <input type="date" class="modal-input" name="birtday" id="birtday" required>
-                    </div>
-                    <!-- Email -->
-                    <div class="d-email d-input">
-                        <label for="" class="modal-label">Email:</label>
-                        <input type="text" class="modal-input" name="email" id="email" required>
-                    </div>
-                    <!-- Address -->
-                    <div class="d-address d-input">
-                        <label for="" class="modal-label">Địa chỉ:</label>
-                        <input type="text" class="modal-input" name="address" id="address" required>
-                    </div>
-                    <!-- Phone -->
-                    <div class="d-phone d-input">
-                        <label for="" class="modal-label">Số điện thoại:</label>
-                        <input type="text" class="modal-input" name="phone" id="phone" required>
+                    <div class="row">
+                        <div class="col-2">
+                            <!-- courses -->
+                            <div class="d-selected-course d-input">
+                                <label for="" class="modal-label">Bạn đang chọn:</label>
+                                <input type="text" class="modal-input" name="name" id="selected-course" disabled>
+                            </div>
+                            <!-- Name -->
+                            <div class="d-name d-input">
+                                <label for="" class="modal-label">Họ và tên:</label>
+                                <input type="text" class="modal-input" name="name" id="name" required>
+                            </div>
+                            <!-- Sex -->
+                            <div class="d-sex d-input">
+                                <label for="" class="modal-label d-inline-block">Giới tính:</label>
+                                <input type="radio" class="modal-input" name="sex" id="sex" value="Nam" checked> Nam
+                                <input type="radio" class="modal-input" name="sex" id="sex" value="Nữ"> Nữ
+                            </div>
+                            <!-- Birtday -->
+                            <div class="d-birtday d-input">
+                                <label for="" class="modal-label">Ngày sinh:</label>
+                                <input type="date" class="modal-input" name="birtday" id="birtday" required>
+                            </div>
+                            <!-- Email -->
+                            <div class="d-email d-input">
+                                <label for="" class="modal-label">Email:</label>
+                                <input type="text" class="modal-input" name="email" id="email" placeholder="example@gmail.com" required>
+                            </div>
+                        </div>
+    
+                        <div class="col-2">
+                            <!-- Address -->
+                           
+                            <div class="d-cities d-input">
+                                <label for="" class="modal-label">Tỉnh/Thành phố:</label>
+                                <select name="district" id="cities" class="modal-input district-cities-input">
+                                    <option value="" selected>Chọn</option>
+                                </select>
+                            </div>
+                            <div class="d-district d-input">
+                                <label for="" class="modal-label">Quận/Huyện:</label>
+                                <select name="district" id="district" class="modal-input district-cities-input" disabled>
+                                    <option value="" selected>Chọn</option>
+                                </select>
+                            </div>
+                            <div class="d-ward d-input">
+                                <label for="" class="modal-label">Phường/Xã:</label>
+                                <select name="ward" id="ward" class="modal-input district-cities-input" disabled>
+                                    <option value="" selected>Chọn</option>
+                                </select>
+                            </div>
+        
+                            <div class="d-address d-input">
+                                <label for="" class="modal-label">Địa chỉ:</label>
+                                <input type="text" class="modal-input" name="address" id="address" placeholder="Số nhà, tên đường..." required>
+                            </div>
+                            <!-- Phone -->
+                            <div class="d-phone d-input">
+                                <label for="" class="modal-label">Số điện thoại:</label>
+                                <input type="text" class="modal-input" name="phone" id="phone" required>
+                            </div>
+                        </div>
                     </div>
                     <!-- button -->
                     <button type="submit" onclick="" class="btn-submit">Đăng ký</button>
