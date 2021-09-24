@@ -418,32 +418,18 @@ const cities = [
         ]
     },
 ]
-    
-// open - close modal
+
+// modal
 const modalClose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal-register');
 const selectedCourses = document.querySelector('#selected-course');
 const body = document.querySelector("body");
-function showRegister(id) {
-    modal.classList.add('open');
-    body.style.overflow = "hidden";
-    let nameCourse = courses.find(function(course,index) {
-        return course.id == id;
-    });
-    selectedCourses.setAttribute("value",nameCourse.name);
-}
-
-function hideBuyTickets() {
-    modal.classList.remove('open');
-    body.style.overflow = "auto";
-}
-
-modalClose.addEventListener('click', hideBuyTickets);
-
-// process select
+// get select
 const selectCity = document.querySelector("#cities");
 const selectDistrict = document.querySelector("#district");
 const selectWard = document.querySelector("#ward");
+//////////////
+
 // Get and add cities
 
 // Get cities
@@ -458,7 +444,8 @@ function getDistricts(nameCity) {
     let fitterDistricts = cities.find(function(city) {
         return city.nameCity == nameCity;
     });
-    let getDistricts = [fitterDistricts].map(function(district) {
+    // map only array,fitterDistricts is object => [fitterDistricts]
+    let getDistricts = [fitterDistricts].map(function(district) { 
         return district.districts;
     });
     return getDistricts[0];
@@ -475,33 +462,61 @@ function getWard(nameDistrict, districts) {
     return getWard[0];
 }
 
-// Add - type select
-const allCities = getCities();
-const showCities = allCities.map(function(city) {
-    return `<option value="${city}">${city}</option>`
-})
-selectCity.innerHTML += showCities;
-
-// event select city
-selectCity.addEventListener("change", function() {
-    let selectedCity = this.value;
-    let districts = getDistricts(selectedCity);
-    let showDistricts = districts.map(function(district) {
-        return `<option value="${district.nameDistrict}">${district.nameDistrict}</option>`
+function showDataCities() {
+    // Add - type select
+    const allCities = getCities();
+    const showCities = allCities.map(function(city) {
+        return `<option value="${city}">${city}</option>`
     })
-    selectDistrict.innerHTML = showDistricts;
-    selectDistrict.disabled = false;
-});
+    selectCity.innerHTML = '<option value="" selected>Chọn</option>'+showCities;
 
-// event select district
-selectDistrict.addEventListener("change", function() {
-    let selectedCity = selectCity.value;
-    let selectedDistrict = this.value;
-    let districts = getDistricts(selectedCity);
-    let wards = getWard(selectedDistrict, districts);
-    let showWard = wards.map(function(ward) {
-        return `<option value="${ward.nameWard}">${ward.nameWard}</option>`
+    // event select city
+    selectCity.addEventListener("change", function() {
+        let selectedCity = this.value;
+        let districts = getDistricts(selectedCity);
+        let showDistricts = districts.map(function(district) {
+            return `<option value="${district.nameDistrict}">${district.nameDistrict}</option>`
+        })
+        selectDistrict.innerHTML = showDistricts;
+        selectDistrict.disabled = false;
+    });
+
+    // event select district
+    selectDistrict.addEventListener("change", function() {
+        let selectedCity = selectCity.value;
+        let selectedDistrict = this.value;
+        let districts = getDistricts(selectedCity);
+        let wards = getWard(selectedDistrict, districts);
+        let showWard = wards.map(function(ward) {
+            return `<option value="${ward.nameWard}">${ward.nameWard}</option>`
+        })
+        selectWard.innerHTML = showWard;
+        selectWard.disabled = false;
     })
-    selectWard.innerHTML = showWard;
-    selectWard.disabled = false;
-})
+}
+
+
+function showRegister(id) {
+    modal.classList.add('open');
+    body.style.overflow = "hidden";
+    let nameCourse = courses.find(function(course,index) {
+        return course.id == id;
+    });
+    selectedCourses.setAttribute("value",nameCourse.name);
+    showDataCities();
+}
+
+function hideRegister() {
+    // reset select
+    selectDistrict.innerHTML = '<option value="" selected>Chọn</option>';
+    selectWard.innerHTML = '<option value="" selected>Chọn</option>';
+    selectDistrict.disabled = true;
+    selectWard.disabled = true;
+    // close modal
+    modal.classList.remove('open');
+    body.style.overflow = "auto";
+}
+
+modalClose.addEventListener('click', hideRegister);
+
+
