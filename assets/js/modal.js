@@ -423,11 +423,16 @@ const cities = [
 const modalClose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal-register');
 const selectedCourses = document.querySelector('#selected-course');
-const body = document.querySelector("body");
+const body = document.querySelector('body');
+const notify = document.querySelector('.notify-register');
+const modalForm = document.querySelector('.modal-main');
+const btnNotify = document.querySelector('#btn-accept');
 // get select
-const selectCity = document.querySelector("#cities");
-const selectDistrict = document.querySelector("#district");
-const selectWard = document.querySelector("#ward");
+const formRegister = document.querySelector('.form-register');
+const selectCity = document.querySelector('#cities');
+const selectDistrict = document.querySelector('#district');
+const selectWard = document.querySelector('#ward');
+
 //////////////
 
 // Get and add cities
@@ -477,7 +482,7 @@ function showDataCities() {
         let showDistricts = districts.map(function(district) {
             return `<option value="${district.nameDistrict}">${district.nameDistrict}</option>`
         })
-        selectDistrict.innerHTML = showDistricts;
+        selectDistrict.innerHTML = '<option value="" selected>Chọn</option>'+ showDistricts;
         selectDistrict.disabled = false;
     });
 
@@ -490,7 +495,7 @@ function showDataCities() {
         let showWard = wards.map(function(ward) {
             return `<option value="${ward.nameWard}">${ward.nameWard}</option>`
         })
-        selectWard.innerHTML = showWard;
+        selectWard.innerHTML = '<option value="" selected>Chọn</option>'+ showWard;
         selectWard.disabled = false;
     })
 }
@@ -504,9 +509,30 @@ function showRegister(id) {
     });
     selectedCourses.setAttribute("value",nameCourse.name);
     showDataCities();
+    Validator({
+        form: '.form-register',
+        formGroupSelector: '.d-input',
+        errorSelector: '.form-message',
+        rules: [
+            Validator.isRequired('#name','Vui lòng điền họ và tên'),
+            Validator.isEmail('#email', 'Đây phải là email'),
+            Validator.isBirthday('#birthday','Vui lòng điền đúng ngày sinh'),
+            Validator.isRequired('#cities','Vui lòng chọn Tỉnh/Thành Phố'),
+            Validator.isRequired('#address','Vui lòng điền địa chỉ'),
+            Validator.isPhone('#phone','Vui lòng điền số điện thoại'),
+        ],
+        onSubmit: function(data) {
+            notify.classList.add('open');
+            btnNotify.addEventListener('click', function() {
+                notify.classList.remove('open');
+                hideRegister();
+            });
+        }
+    })
 }
 
 function hideRegister() {
+    formRegister.reset();
     // reset select
     selectDistrict.innerHTML = '<option value="" selected>Chọn</option>';
     selectWard.innerHTML = '<option value="" selected>Chọn</option>';
@@ -519,4 +545,4 @@ function hideRegister() {
 
 modalClose.addEventListener('click', hideRegister);
 
-
+// check value form register

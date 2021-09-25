@@ -268,7 +268,7 @@
             <div class="feedback">
     
             </div>
-    
+
         </div>
     
         <div id="footer">
@@ -297,7 +297,8 @@
                             <!-- Name -->
                             <div class="d-name d-input">
                                 <label for="" class="modal-label">Họ và tên:</label>
-                                <input type="text" class="modal-input" name="name" id="name" required>
+                                <input type="text" class="modal-input" name="name" id="name" >
+                                <span class="form-message"></span>
                             </div>
                             <!-- Sex -->
                             <div class="d-sex d-input">
@@ -308,12 +309,14 @@
                             <!-- Birtday -->
                             <div class="d-birtday d-input">
                                 <label for="" class="modal-label">Ngày sinh:</label>
-                                <input type="date" class="modal-input" name="birtday" id="birtday" required>
+                                <input type="date" class="modal-input" name="birthday" id="birthday" >
+                                <span class="form-message"></span>
                             </div>
                             <!-- Email -->
                             <div class="d-email d-input">
                                 <label for="" class="modal-label">Email:</label>
-                                <input type="text" class="modal-input" name="email" id="email" placeholder="example@gmail.com" required>
+                                <input type="text" class="modal-input" name="email" id="email" placeholder="example@gmail.com" >
+                                <span class="form-message"></span>
                             </div>
                         </div>
     
@@ -325,6 +328,7 @@
                                 <select name="district" id="cities" class="modal-input district-cities-input">
                                     <!-- <option value="" selected>Chọn</option> -->
                                 </select>
+                                <span class="form-message"></span>
                             </div>
                             <div class="d-district d-input">
                                 <label for="" class="modal-label">Quận/Huyện:</label>
@@ -341,12 +345,14 @@
         
                             <div class="d-address d-input">
                                 <label for="" class="modal-label">Địa chỉ:</label>
-                                <input type="text" class="modal-input" name="address" id="address" placeholder="Số nhà, tên đường..." required>
+                                <input type="text" class="modal-input" name="address" id="address" placeholder="Số nhà, tên đường..." >
+                                <span class="form-message"></span>
                             </div>
                             <!-- Phone -->
                             <div class="d-phone d-input">
                                 <label for="" class="modal-label">Số điện thoại:</label>
-                                <input type="text" class="modal-input" name="phone" id="phone" required>
+                                <input type="text" class="modal-input" name="phone" id="phone" >
+                                <span class="form-message"></span>
                             </div>
                         </div>
                     </div>
@@ -356,11 +362,25 @@
             </div>
         </div>
     </div>
+    <div class="notify-register">
+        <div class="main-notify-register">
+            <header class="notify-register-header">
+                <h1 class="notify-register-heading">Đăng ký thành công</h1>
+            </header>
+            <div class="notify-register-body">
+                <p class="notify-register-content"><strong><u>Lưu ý:</u></strong> Trong 24h sau khi đăng ký sẽ có nhân viên liên qua thông tin bạn cung cấp xác nhận đăng ký hoặc bạn hãy đến trung tâm English gần nhất để hoàn thành thủ tục nhập học.</p>
+                <div class="d-btn-accept">
+                    <button id="btn-accept">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End modal -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="assets/lib/slick-1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/slideCourses.js"></script>
+    <script src="assets/js/validator.js"></script>
     <script src="assets/js/modal.js"></script>
 </body>
 </html>

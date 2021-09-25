@@ -445,17 +445,12 @@ a {
     justify-content: center;
 }
 
-.open {
-    display: flex;
-}
-
 .modal-register .modal-main {
     background-color: #fff;
     width: 875px;
     position: relative;
     border-radius: 8px;
     animation: modalFaceIn ease 0.5s;
-    
 }
 
 .modal-main .modal-header {
@@ -503,6 +498,7 @@ a {
 }
 
 .modal-main .d-input {
+    position: relative;
     display: flex;
     padding: 12px 0;
     align-items: center;
@@ -534,7 +530,7 @@ a {
     font-size: 18px;
 }
 
-.modal-main input#birtday {
+.modal-main input#birthday {
     width: 206.75px;
     height: 37px;
 }
@@ -566,10 +562,106 @@ a {
     display: flex;
 }
 
-.modal-main .county-cities-input {
+.modal-main .district-cities-input {
     height: 37px;
 }
 
+/* message error */
+.modal-main .form-message::before {
+    content: '';
+    border: 10px solid;
+    border-color: transparent transparent #FF665A transparent;
+    position: absolute;
+    top: -20px;
+    display: none;
+}
+
+.modal-main .form-message {
+    position: absolute;
+    padding: 3px;
+    top: 60px;
+    left: calc(30% + 12px);
+    background-color: #FF665A;
+    z-index: 1;
+    border-radius: 4px;
+    display: none;
+}
+
+.d-input.invalid .form-message::before{
+    display: block;
+}
+
+.d-input.invalid .form-message {
+    display: block;
+}
+
+.d-input.invalid .modal-input {
+    border-color: #FF665A;
+}
+
+.notify-register {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.notify-register .main-notify-register {
+    background-color: #fff;
+    width: 600px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.main-notify-register .notify-register-header {
+    background-color: #ffd261;
+    border-radius: 8px 8px 0 0;
+    height: 70px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-notify-register .notify-register-body {
+    padding: 18px;
+}
+
+.main-notify-register .d-btn-accept {
+    text-align: center;
+}
+
+.main-notify-register #btn-accept {
+    margin-top: 40px;
+    font-size: 19px;
+    padding: 4px 40px;
+    background-color: #ffd261;
+    border: none;
+    border-radius: 12px;
+}
+
+.main-notify-register #btn-accept:hover {
+    background-color: #e9a929;
+    cursor: pointer;
+}
+
+.main-notify-register .notify-register-content {
+    font-size: 20px;
+}
+
+/* open */
+
+.open {
+    display: flex;
+}
 @keyframes modalFaceIn {
     from {
         transform: translateY(-140px);
