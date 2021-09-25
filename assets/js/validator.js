@@ -191,7 +191,7 @@ Validator.isBirthday = function (selector, message) {
         test: function (value) {
             var nowTimestamp = new Date();
             var time = new Date(value);
-            return time.getTime() < nowTimestamp.setHours(0,0,0,0) ? undefined :  message || `Vui lòng nhập đúng số điện thoại`;
+            return time.getTime() < nowTimestamp.setHours(0,0,0,0) ? undefined :  message || `Vui lòng nhập đúng ngày sinh`;
         }
     };
 }
