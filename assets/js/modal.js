@@ -6,37 +6,37 @@ const courses = [
 
     {
         id : 2,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học TOEIC 500+"
     },
 
     {
         id : 3,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học TOEIC 800+"
     },
 
     {
         id : 4,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học luyện đề TOEIC"
     },
 
     {
         id : 5,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học TOEIC 4 kỹ năng"
     },
 
     {
         id : 6,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học A1 cho người mới bắt đầu"
     },
 
     {
         id : 7,
-        name : "Khóa học TOEIC cấp tốc"
+        name : "Khóa học A1 nâng cao"
     },
 
     {
         id : 8,
-        name : "Khóa học A1"
+        name : "Khóa học B1"
     }
 ];
 
@@ -427,6 +427,11 @@ const body = document.querySelector('body');
 const notify = document.querySelector('.notify-register');
 const modalForm = document.querySelector('.modal-main');
 const btnNotify = document.querySelector('#btn-accept');
+// Details course
+const modalDetailsCourse = document.querySelector('.view-details-courses');
+const closeDetailsCourse = document.querySelector('.view-courses-close');
+const divCourses = document.querySelectorAll('.details-courses');
+
 // get select
 const formRegister = document.querySelector('.form-register');
 const selectCity = document.querySelector('#cities');
@@ -542,9 +547,35 @@ function hideRegister() {
     selectWard.disabled = true;
     // close modal
     modal.classList.remove('open');
+    let inputItems = document.querySelectorAll('.d-input.invalid');
+    inputItems.forEach(function(item,index){
+        item.classList.remove('invalid');
+    })
     body.style.overflow = "auto";
 }
 
 modalClose.addEventListener('click', hideRegister);
 
-// check value form register
+// details courses Có thời gian object cho tiện
+
+function showDetailsCourse() {
+    let getHeading = this.querySelector('.heading-detail-courses').textContent;
+    document.querySelector('.view-courses-heading').textContent = getHeading;
+    modalDetailsCourse.classList.add('open');
+    body.style.overflow = "hidden";
+}
+
+function hideDetailsCourse() {
+    modalDetailsCourse.classList.remove('open');
+    body.style.overflow = "auto";
+}
+
+for (const divCourse of divCourses) {
+    divCourse.addEventListener('click', showDetailsCourse);
+}
+
+closeDetailsCourse.addEventListener('click', hideDetailsCourse);
+//  Sử lý không cho parent hiện lên
+$(".btn-register").click(function (event) {
+    event.stopPropagation();
+});
